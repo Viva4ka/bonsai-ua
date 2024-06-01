@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bonsai UA</title>
+    <link rel="stylesheet" href="static/styles/style.css" />
+    <link rel="icon" type="image/png" href="images/icon.png">
+    <script defer src="js/cart.js"></script>
+    <script defer src="js/main.js"></script>
+    <link rel="stylesheet" href="static/styles/card.css">
+    <script>
+      var cartItems = JSON.parse(localStorage.getItem('cart')) || [];
+    </script>
+    <style>
+      /* Стилі для кращого відображення */
+      .cart-item {
+          border: 1px solid #ccc;
+          border-radius: 5px;
+          margin-bottom: 10px;
+          padding: 10px;
+          display: flex;
+          align-items: center;
+      }
+      .cart-item img {
+          width: 80px;
+          height: 80px;
+          margin-right: 10px;
+      }
+      .remove-btn {
+          background-color: #ff4d4d;
+          color: white;
+          padding: 5px 10px;
+          border: none;
+          border-radius: 4px;
+          cursor: pointer;
+      }
+   
+  </style>
+</head>
+<body>
+  <header class="header" id="header">
+    <div class="container header__container">
+        <a href="index.html" class="logo">
+          <img class="logo__img" src="images/logo1.png" alt="Логотип" width="150px"/>
+        </a>
+        <nav class="menu">
+          <ul class="menu__list">
+            <li class="menu__item">
+              <a class="menu__link" href="catalog.html"> Каталог </a>
+            </li>
+            <li class="menu__item">
+              <a class="menu__link" href="about.html"> Про нас </a>
+            </li>
+            <li class="menu__item">
+              <a class="menu__link" href="cart.html"> Кошик </a>
+            </li>
+            <li class="menu__item">
+              <a class="menu__link" href="contact.html"> Зворотній зв'язок </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <h1>
+      <div id="cart-summary">
+      <div id="item-count"></div> </h1>
+
+    <div id="cart-items"></div>
+    <div id="total-price"></div>
+    <button class="btn" id="checkout-btn">Оформити замовлення</button>
+
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <form id="modalForm">
+                <label for="phone">Телефон:</label>
+                <input type="text" id="phone" name="phone" required>
+                <label for="city">Місто:</label>
+                <input type="text" id="city" name="city" required>
+                <label for="street">Вулиця:</label>
+                <input type="text" id="street" name="street" required>
+                <button class="btn" type="submit">Підтвердити замовлення</button>
+            </form>
+        </div>
+    </div>
+
+    <div id="order-confirmation" style="display: none;">Вам зателефонують!</div>
+
+    <script src="cart.js"></script>
+
+
+</body>
+</html>
+
+  
