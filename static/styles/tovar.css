@@ -1,0 +1,85 @@
+.container-product {
+        justify-content: center;
+        align-items: flex-start;
+        background: #fff;
+        padding: 30px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        border-radius: 10px;
+        max-width: 1300px;
+        margin: auto;
+        box-sizing: border-box;
+       
+}
+/* назва h3 */
+.product-title {
+    font-size: 35px;
+    text-align: center;   /* зробити по середині */
+}
+
+.img-age {
+    display: flex;
+    align-items: flex-start;
+    margin-top: 20px;
+}
+
+.product-description {
+    margin-right: 20px; 
+    font-size: 35px;
+}
+
+.product-height {
+    font-size: 25px;
+}
+
+
+.btn {
+    display: inline-block;
+    padding: 11px 47px;
+    color: var(--black);
+    border-radius: 12px;
+    background-color: var(--base-color);
+    border: none;   
+    outline: 1px solid transparent;
+    outline-offset: 2px;
+    transition: outline-color var(--transition-duration), background-color var(--transition-duration);
+    cursor: pointer;
+    font-size: 30px;
+}
+
+.btn:focus-visible {
+    outline-color: var(--base-color);
+}
+.btn:hover {
+ background-color: var(--base-color-hover);
+}
+.btn:active {
+    background-color: var(--base-color-active);
+}
+
+
+.quantity {
+ font-size: 30px;
+ font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.product-price{
+    font-size: 30px;
+}
+
+.text-button {
+    width: 700px;
+    text-align: center;
+}
+
+
+.product-image {
+    width: 500px;
+    margin-right: 20px; 
+}
+
+.product-desc {
+    font-size: 20px;
+}
+
+.back img{
+    width: 60px;
+}
